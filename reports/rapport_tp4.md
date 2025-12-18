@@ -6,14 +6,14 @@
 ![alt text](image.png)
 
 ### Question 1.b
-![alt text](image-1.png)
+![alt text](images/tp4/image-1.png)
 
 ### Question 1.c
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](images/tp4/image-2.png)
+![alt text](images/tp4/image-3.png)
 
 ### Question 1.d
-![alt text](image-4.png)
+![alt text](images/tp4/image-4.png)
 
 ### Question 1.e
 docker compose up -d --build
@@ -27,11 +27,11 @@ mlflow : nouvelle installation pour gérer les versions des modèles
 
 ## Exercice 2 
 ### Question 2.b
-![alt text](image-5.png)
+![alt text](images/tp4/image-5.png)
 
 ### Question 2.c
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](images/tp4/image-6.png)
+![alt text](images/tp4/image-7.png)
 
 ### Question 2.d
 AS_OF permet de reprendre les données du 31 janvier pour éviter le data leakage.
@@ -39,27 +39,27 @@ random_state permet de maîtriser la reproducibilité des résulats en obtenant 
 
 ## Exercice 3
 ### Question 3.a
-![alt text](image-8.png)
+![alt text](images/tp4/image-8.png)
 
 ### Question 3.c
-![alt text](image-9.png)
+![alt text](images/tp4/image-9.png)
 
 ### Question 3.d
-![alt text](image-10.png)
+![alt text](images/tp4/image-10.png)
 Version 2 : runid 064531f19cec433ab80268a6adf1dd70
 
 ### Question 3.e
-![alt text](image-11.png)
+![alt text](images/tp4/image-11.png)
 
 ### Question 3.g
 Grâce à l'interface nous gérons mieux les différentes étapes auxquelles sont nos différents modèles. Nous maîtrisons lequel est en production et pouvons contrôler les metrics sélectionnés à tout instant.
 
 ## Exercice 4
 ### Question 4.d
-![alt text](image-12.png)
+![alt text](images/tp4/image-12.png)
 
 ### Question 4.e
-![alt text](image-13.png)
+![alt text](images/tp4/image-13.png)
 {"user_id":"7590-VHVEG","prediction":1,"features_used":{"net_service":"DSL","paperless_billing":true,"plan_stream_movies":false,"plan_stream_tv":false,"months_active":1,"monthly_fee":29.850000381469727,"rebuffer_events_7d":1,"unique_devices_30d":3,"watch_hours_30d":24.48365020751953,"skips_7d":4,"avg_session_mins_7d":29.14104461669922,"failed_payments_90d":1,"support_tickets_90d":0,"ticket_avg_resolution_hrs_90d":16.0}}
 
 
@@ -70,11 +70,11 @@ C'est à dire que lors d'un changement de modèle pour la production, la seule c
 
 ## Exercice 5
 ### Question 5.a
-![alt text](image-13.png)
+![alt text](images/tp4/image-13.png)
 {"user_id":"7590-VHVEG","prediction":1,"features_used":{"net_service":"DSL","paperless_billing":true,"plan_stream_movies":false,"plan_stream_tv":false,"months_active":1,"monthly_fee":29.850000381469727,"rebuffer_events_7d":1,"unique_devices_30d":3,"watch_hours_30d":24.48365020751953,"skips_7d":4,"avg_session_mins_7d":29.14104461669922,"failed_payments_90d":1,"support_tickets_90d":0,"ticket_avg_resolution_hrs_90d":16.0}}
 
 ### Question 5.b
-![alt text](image-14.png)
+![alt text](images/tp4/image-14.png)
 {"error":"Missing features for user_id=9999","missing_features":["net_service","paperless_billing","plan_stream_movies","plan_stream_tv","months_active","monthly_fee","rebuffer_events_7d","unique_devices_30d","watch_hours_30d","skips_7d","avg_session_mins_7d","failed_payments_90d","support_tickets_90d","ticket_avg_resolution_hrs_90d"]}
 
 ### Question 5.c
