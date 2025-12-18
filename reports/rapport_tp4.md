@@ -3,7 +3,7 @@
 ## Exercice 1
 
 ### Question 1.a
-![alt text](image.png)
+![alt text](images/tp4/image.png)
 
 ### Question 1.b
 ![alt text](images/tp4/image-1.png)
