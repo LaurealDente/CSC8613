@@ -6,12 +6,33 @@ from feast import FeatureStore
 import mlflow
 import pandas as pd
 import os
+from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
+from fastapi.responses import Response
+import time
 
 
 # TODO: créer une instance FastAPI
 app = FastAPI(title="StreamFlow Churn Prediction API")
 REPO_PATH = "/repo"
 MODEL_URI = "models:/streamflow_churn/Production"
+
+# TODO: Créez les métriques avec les noms suivants:
+# un Counter: "api_requests_total"
+# un Histogram: "api_request_latency_seconds"
+REQUEST_COUNT = Counter("api_requests_total", "Total number of API requests")
+REQUEST_LATENCY = Histogram("api_request_latency_seconds", "Latency of API requests in seconds")
+
+
+
+class UserPayload(BaseModel):
+    user_id: str
+
+
+@app.get("/metrics")
+def metrics():
+    # TODO: returnez une Response avec generate_latest() et CONTENT_TYPE_LATEST comme type de media
+    return Response(generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
 
 # TODO: définir une route GET /health
 @app.get("/health")
@@ -53,16 +74,15 @@ def get_features(user_id: str):
     }
 
 
-class UserPayload(BaseModel):
-    user_id: str
-
-
 
 # TODO 2: Mettre une requête POST
 @app.post("/predict")
 def predict(payload: UserPayload):
     if store is None or model is None:
         return {"error": "Model or feature store not initialized"}
+
+    start_time = time.time()
+    REQUEST_COUNT.inc()
 
     # TODO (optionel) à adapter si besoin
     features_request = [
@@ -106,6 +126,9 @@ def predict(payload: UserPayload):
     # Astuce : la plupart des modèles MLflow “pyfunc” utilisent model.predict(X)
     # (on ne suppose pas predict_proba ici)
     y_pred = model.predict(X)
+
+
+    REQUEST_LATENCY.observe(time.time() - start_time)
 
     # TODO 5 : Retourner la prédiction
     return {
