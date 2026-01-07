@@ -3,29 +3,29 @@
 ## Exercice 1
 ### Question 1.b
 
-![alt text](image-1.png)
+![alt text](images/tp6/image-1.png)
 
-![alt text](image-2.png)
+![alt text](images/tp6/image-2.png)
 
 ### Question 1.c
 
-![alt text](image.png)
+![alt text](images/tp6/image.png)
 
-![alt text](image-3.png)
+![alt text](images/tp6/image-3.png)
 
 ## Exercice 2
 ### Question 2.d
 
-![alt text](image-3.png)
+![alt text](images/tp6/image-3.png)
 
 Nous testons une fonction pure afin de s'assurer de son fonctionnement sans dépendance avant l'intégration à une fonction métier.
 
 ## Exercice 3 
 ### Question 3.d
 
-![alt text](image-4.png)
+![alt text](images/tp6/image-4.png)
 
-![alt text](image-5.png)
+![alt text](images/tp6/image-5.png)
 
 On peut observer que le nouveau modèle n'a pas été promu. (auc trop faible)
 Le delta permet de s'assurer de la supériorité du nouveau modèle sur l'ancien en prenant en compte le bruit.
@@ -33,9 +33,9 @@ Le delta permet de s'assurer de la supériorité du nouveau modèle sur l'ancien
 ## Exercice 4
 ### Question 4.c
 
-![alt text](image-6.png)
+![alt text](images/tp6/image-6.png)
 
-![alt text](image-7.png)
+![alt text](images/tp6/image-7.png)
 
 ## Exercice 5
 ### Question 5.c
@@ -67,7 +67,7 @@ Ce restart de l'api est important pour que celui-ci prenne en compte le modèle 
 ## Exercice 6 
 ### Question 6.c
 
-![alt text](image-8.png)
+![alt text](images/tp6/image-8.png)
 
 On peut vérifier grâce à ce démarrage docker compose dans la CI que le projet fonctionne indépendemment de la configuration local de l'ordinateur de travail. Vérifiant ainsi la possibilité de mise en production sans problème.
 
